@@ -2,9 +2,8 @@ torch
 torchvision
 timm
 datasets
+huggingface_hub
 numpy
 pandas
 matplotlib
-tensorflow
-streamlit
 pillow
