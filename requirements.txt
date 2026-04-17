@@ -1,10 +1,5 @@
-torch
-torchvision
-timm
-datasets
-huggingface_hub
-numpy
-pandas
-matplotlib
-pillow
-streamlit
+streamlit>=1.36
+pillow>=10.0
+torch>=2.2
+torchvision>=0.17
+huggingface_hub>=0.23
