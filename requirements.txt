@@ -1,0 +1,10 @@
+torch
+torchvision
+timm
+datasets
+numpy
+pandas
+matplotlib
+tensorflow
+streamlit
+pillow
