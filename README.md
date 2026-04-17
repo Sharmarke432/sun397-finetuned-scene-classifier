@@ -73,7 +73,7 @@ The project uses the following main libraries (reflecting the imports used in th
 Install (minimal) via:
 
 ```bash
-pip install torch torchvision timm datasets pandas numpy pillow matplotlib huggingface_hub
+pip install torch torchvision timm datasets pandas numpy matplotlib
 ```
 
 ## Models
@@ -102,7 +102,7 @@ All three models are trained separately on the same 10-class SUN397 subset.
 
 ## End-to-End Pipeline
 
-High-level pipeline (no detailed code, only steps):
+High-level pipeline:
 
 ### 1. Data preparation
 
@@ -152,12 +152,6 @@ High-level pipeline (no detailed code, only steps):
 - Run a forward pass through a fine-tuned model (or the ensemble).  
 - Apply softmax to obtain class probabilities and pick the top-1 or top-k predictions.  
 - Print or visualize the predicted scene label.
-
-### 6. Optional Hugging Face / Colab integration
-
-- In Colab, use `google.colab.files.upload` to send custom images to the notebook.  
-- Use `huggingface_hub.notebook_login` to authenticate.   
-- Optionally push trained weights and configuration to a Hugging Face Hub repo for sharing. 
 
 ## Repository Structure
 
