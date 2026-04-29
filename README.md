@@ -153,26 +153,6 @@ High-level pipeline:
 - Apply softmax to obtain class probabilities and pick the top-1 or top-k predictions.  
 - Print or visualize the predicted scene label.
 
-## Repository Structure
-
-A suggested layout:
-
-```text
-.
-├── data/
-├── src/
-│   ├── dataset.py        # Dataset utilities and filtering for 10 classes
-│   ├── models.py         # EfficientNet-B0, MobileNetV3, ResNet18 wrappers
-│   ├── train.py          # Training loops for each backbone
-│   ├── evaluate.py       # Evaluation and metrics
-│   └── inference.py      # Inference utilities / CLI
-├── notebooks/
-│   └── exploration.ipynb
-├── checkpoints/
-├── requirements.txt
-└── README.md
-```
-
 ## References
 
 - SUN397 scene recognition benchmark.
