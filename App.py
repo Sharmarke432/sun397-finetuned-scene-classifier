@@ -67,3 +67,15 @@ if uploaded_file is not None:
     pred_label = id_to_label[int(pred)]
     st.write(f"**Prediction:** {pred_label}")
     st.write(f"**Confidence:** {conf.item():.3f}")
+    
+    # --- Show all class confidences ---
+    st.subheader("All Class Probabilities")
+    
+    # Build a sorted dataframe of all classes + their confidence
+    all_probs = probs.numpy()  # shape: (num_classes,)
+    prob_df = pd.DataFrame({
+        "Class": [id_to_label[i] for i in range(len(all_probs))],
+        "Confidence": all_probs
+    }).sort_values("Confidence", ascending=False).reset_index(drop=True)
+
+    st.bar_chart(prob_df.set_index("Class")["Confidence"])
