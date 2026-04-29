@@ -4,6 +4,7 @@ import torch
 from torchvision import models, transforms
 from huggingface_hub import hf_hub_download
 import json
+import pandas as pd
 
 @st.cache_resource
 def load_model():
