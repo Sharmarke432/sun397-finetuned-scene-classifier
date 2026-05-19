@@ -8,7 +8,7 @@ import pandas as pd
 
 @st.cache_resource
 def load_model():
-    repo_id = "SharmarkeO/efficientnet-b0-sun10"
+    repo_id = "SharmarkeO/mobilenet_v3_sun_model_10"
 
     # download config
     config_path = hf_hub_download(repo_id, "config.json")
