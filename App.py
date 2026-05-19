@@ -7,27 +7,28 @@ import json
 import pandas as pd
 
 @st.cache_resource
+@st.cache_resource
 def load_model():
     repo_id = "SharmarkeO/mobilenet_v3_sun_model_10"
-
-    # download config
+    
+    # Download config
     config_path = hf_hub_download(repo_id, "config.json")
     with open(config_path, "r") as f:
         config = json.load(f)
-
+    
     id_to_label = {int(k): v for k, v in config["id_to_label"].items()}
-
-    # build model
-    model = models.efficientnet_b0(weights=None)
-    in_features = model.classifier[1].in_features
-    model.classifier[1] = torch.nn.Linear(in_features, config["num_classes"])
-
-    # download weights
+    
+    # ✅ Build MobileNetV3-Large with correct classifier index
+    model = models.mobilenet_v3_large(weights=None)
+    in_features = model.classifier[3].in_features
+    model.classifier[3] = torch.nn.Linear(in_features, config["num_classes"])
+    
+    # Download and load weights
     weights_path = hf_hub_download(repo_id, "pytorch_model.bin")
     state_dict = torch.load(weights_path, map_location="cpu")
     model.load_state_dict(state_dict)
     model.eval()
-
+    
     return model, id_to_label
 
 transform = transforms.Compose([
