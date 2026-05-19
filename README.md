@@ -1,4 +1,5 @@
 # SUN397 Finetuned Scene Classifier
+# Notebook: https://colab.research.google.com/drive/10m-ODHPm2_6k_GMZTaX7YoFHw2vNZqr2?usp=sharing
 
 This project fine-tunes three pretrained convolutional neural networks (**EfficientNet-B0**, **MobileNetV3**, and **ResNet18**) on 10 selected SUN397 scene categories using transfer learning, then evaluates and compares their performance on held-out test data.
 
