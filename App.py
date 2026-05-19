@@ -29,9 +29,27 @@ MODELS = {
     "MobileNetV3":     {"folder": "mobilenet_v3",    "build": "mobilenet_v3_large"},
 }
 
-CLASSES = [
-    "beach", "bedroom", "kitchen", "living room", "office",
-    "mountain", "highway", "street", "church indoor", "forest broadleaf"
+CLASSES =  [
+    "slum",
+    "botanical garden",
+    "arch",
+    "volleyball court outdoor",
+    "drugstore",
+    "dentists office",
+    "cottage garden",
+    "cafeteria",
+    "volcano",
+    "boardwalk",
+    "temple east asia",
+    "playground",
+    "bazaar indoor",
+    "restaurant patio",
+    "lake natural",
+    "art school",
+    "art gallery",
+    "beauty salon",
+    "corn field",
+    "creek",
 ]
 
 
@@ -105,7 +123,7 @@ def run_inference(model, id_to_label, image):
 # UI
 st.title("🏞️ SUN10 Scene Classifier")
 st.caption(
-    "Fine-tuned on 10 SUN397 scene categories: "
+    "Fine-tuned on 20 SUN397 scene categories: "
     + ", ".join(CLASSES)
 )
 
