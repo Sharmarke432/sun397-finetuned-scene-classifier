@@ -37,7 +37,7 @@ transform = transforms.Compose([
                          std=[0.229, 0.224, 0.225]),
 ])
 
-st.title("SUN10 Scene Classifier (EfficientNet‑B0)")
+st.title("SUN10 Scene Classifier (MobileNet-v3)")
 
 st.write(
     "This classifier was fine-tuned on **10 SUN scene categories only** "
