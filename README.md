@@ -29,16 +29,26 @@ In this project we restrict to 10 scene categories, for example:
 
 ```python
 CLASSES = [
-    "beach",
-    "bedroom",
-    "kitchen",
-    "living room",
-    "office",
-    "mountain",
-    "highway",
-    "street",
-    "church indoor",
-    "forest broadleaf",
+    "slum",
+    "botanical garden",
+    "arch",
+    "volleyball court outdoor",
+    "drugstore",
+    "dentists office",
+    "cottage garden",
+    "cafeteria",
+    "volcano",
+    "boardwalk",
+    "temple east asia",
+    "playground",
+    "bazaar indoor",
+    "restaurant patio",
+    "lake natural",
+    "art school",
+    "art gallery",
+    "beauty salon",
+    "corn field",
+    "creek",
 ]
 ```
 
